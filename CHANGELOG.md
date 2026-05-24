@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+- Added the `$fill` layout token (`[cship.fill]`), mirroring Starship's `fill` module: it expands to fill the remaining width and right-aligns following content, with multiple `$fill` on a line splitting the space evenly. Configurable `symbol` / `style` / `disabled`. Because Claude Code does not expose the terminal width to statusline commands ([claude-code#22115](https://github.com/anthropics/claude-code/issues/22115)), width is recovered best-effort by reading the controlling terminal of an ancestor process on macOS/Linux, with a `[cship] width` → `80` fallback (and a `[cship] width_offset`, default 3, for the reserved margin). Windows and the web/desktop apps use the fallback.
+
 ## [1.7.1] - 2026-05-12
 
 ### Changed

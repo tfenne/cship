@@ -8,5 +8,6 @@ pub mod modules;
 pub mod passthrough;
 pub mod platform;
 pub mod renderer;
+pub mod terminal;
 pub mod uninstall;
 pub mod usage_limits;
